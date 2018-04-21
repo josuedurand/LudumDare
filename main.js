@@ -1,5 +1,3 @@
-init();
-
 var character = {
 	src 		: '',
 	elem		: $('.character'),
@@ -90,8 +88,10 @@ var isMoveUp;
 var isMoveDown;
 var isMoveLeft;
 var isMoveRight;
-var x= character.elem.css('left');
-var y= character.elem.css('top');
+var x= Number(character.elem.css('left').replace('px', ''));
+var y= Number(character.elem.css('top'));
+x.replace('px', '');
+y.replace('px', '');
 
 function init() {
 	isMoveUp= false;
@@ -106,19 +106,61 @@ function init() {
 
 function update() {
 	if (isMoveUp) {
-		y -= 15;
+		y -= 32;
 		character.elem.css('top', y + 'px');
 	} 
 	if (isMoveDown) {
-		y += 15;
+		y += 32;
 		character.elem.css('top', y + 'px');
 	}
 	if (isMoveLeft) {
-		x -= 15;
+		x -= 32;
 		character.elem.css('left', x + 'px');
 	}
 	if (isMoveRight) {
-		x += 15;
+		x += 32;
 		character.elem.css('left', x + 'px');
 	}
 }
+
+document.addEventListener('keydown', move);
+document.addEventListener('keyup', noMove);
+
+
+function move(evt) {
+	switch (evt.keyCode) {
+		case 37:
+			isMoveLeft= true;
+			break;
+		case 38:
+			isMoveUp= true;
+			break;
+		case 39:
+			isMoveRight= true;
+			console.log(isMoveRight);
+			console.log(x);
+			break;
+		case 40:
+			isMoveDown= true;
+			break;
+	}
+}
+
+function noMove(evt) {
+	switch (evt.keyCode) {
+		case 37:
+			isMoveLeft= false;
+			break;
+		case 38:
+			isMoveUp= false;
+			break;
+		case 39:
+			isMoveRight= false;
+			break;
+		case 40:
+			isMoveDown= false;
+			break;
+	}
+}
+
+init();
