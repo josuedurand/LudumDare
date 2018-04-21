@@ -90,8 +90,6 @@ var isMoveLeft;
 var isMoveRight;
 var x= Number(character.elem.css('left').replace('px', ''));
 var y= Number(character.elem.css('top'));
-x.replace('px', '');
-y.replace('px', '');
 
 function init() {
 	isMoveUp= false;
@@ -137,8 +135,6 @@ function move(evt) {
 			break;
 		case 39:
 			isMoveRight= true;
-			console.log(isMoveRight);
-			console.log(x);
 			break;
 		case 40:
 			isMoveDown= true;
