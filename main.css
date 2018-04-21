@@ -1,7 +1,8 @@
 .jeu{
+    margin: auto;
 	position : relative;
-	width : calc(32px * 5);
-	height : calc(32px * 5);
+	width : calc(32px * 20);
+	height : calc(32px * 20);
 }
 
 .tile {
