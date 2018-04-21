@@ -1,0 +1,22 @@
+.jeu{
+	position : relative;
+	width : calc(32px * 5);
+	height : calc(32px * 5);
+}
+
+.tile {
+	position : absolute;
+	width : 32px;
+	height : 32px;
+}
+
+.character{
+	position : absolute;
+	width : 32px;
+	height : 32px;
+	background-color: red;
+	border-radius : 50%;
+	top : 0;
+	left : 0;
+	z-index:  300;
+}
