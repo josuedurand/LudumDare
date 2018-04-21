@@ -106,18 +106,22 @@ function update() {
 	if (isMoveUp) {
 		y -= 32;
 		character.elem.css('top', y + 'px');
+		collision();
 	} 
 	if (isMoveDown) {
 		y += 32;
 		character.elem.css('top', y + 'px');
+		collision();
 	}
 	if (isMoveLeft) {
 		x -= 32;
 		character.elem.css('left', x + 'px');
+		collision();
 	}
 	if (isMoveRight) {
 		x += 32;
 		character.elem.css('left', x + 'px');
+		collision();
 	}
 }
 
@@ -132,8 +136,6 @@ function move(evt) {
 			break;
 		case 38:
 			isMoveUp= true;
-			console.log(isMoveUp);
-			console.log(y);
 			break;
 		case 39:
 			isMoveRight= true;
@@ -158,6 +160,12 @@ function noMove(evt) {
 		case 40:
 			isMoveDown= false;
 			break;
+	}
+}
+
+function collision() {
+	if (character.elem.position() == getTiles('b')*tileSize) {
+		alert('You Loose');
 	}
 }
 
