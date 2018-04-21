@@ -1,3 +1,4 @@
+init();
 
 var character = {
 	src 		: '',
@@ -82,4 +83,42 @@ function moveCharacter(l, c) {
 	});
 
 	character.position = character.elem.position();
+}
+
+var timer;
+var isMoveUp;
+var isMoveDown;
+var isMoveLeft;
+var isMoveRight;
+var x= character.elem.css('left');
+var y= character.elem.css('top');
+
+function init() {
+	isMoveUp= false;
+	isMoveDown= false;
+	isMoveRight= false;
+	isMoveLeft= false;
+	if (timer != null) {
+		clearInterval(timer);
+	}
+	timer= setInterval(update, 100);
+}
+
+function update() {
+	if (isMoveUp) {
+		y -= 15;
+		character.elem.css('top', y + 'px');
+	} 
+	if (isMoveDown) {
+		y += 15;
+		character.elem.css('top', y + 'px');
+	}
+	if (isMoveLeft) {
+		x -= 15;
+		character.elem.css('left', x + 'px');
+	}
+	if (isMoveRight) {
+		x += 15;
+		character.elem.css('left', x + 'px');
+	}
 }

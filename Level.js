@@ -24,7 +24,6 @@ const grid = [
 
 //         Brouillard: 0
 //         Eau       : 1
-//         Chat      : 'c'
 // Poisson rouge     : 'p'
 
 // Bateau 2 (torpilleur) : 'b', 'b',
