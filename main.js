@@ -8,7 +8,7 @@ var character = {
 	}
 }
 
-var colors = ['black', 'blue'];
+var colors = ['black', 'blue', 'red', 'green', 'white'];
 var $container = $('.tableau');
 var tileSize = 32;
 
@@ -29,7 +29,15 @@ function initGrid() {
 				case 1 :
 					color = colors[1];
 					break;
-
+				case 'p' :
+					color = colors[2];
+					break;
+				case 'b' :
+					color = colors[3];
+					break;
+				case 'c' :
+					color = colors[4];
+					break;
 				default :
 					color = colors[0];
 					break;
