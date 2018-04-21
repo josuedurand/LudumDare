@@ -3,8 +3,8 @@ var character = {
 	src 		: '',
 	elem		: $('.character'),
 	position 	: {
-		top 		: 0,
-		left 		: 0
+		top 		: 576,
+		left 		: 288
 	}
 }
 
@@ -34,9 +34,6 @@ function initGrid() {
 					break;
 				case 'b' :
 					color = colors[3];
-					break;
-				case 'c' :
-					color = colors[4];
 					break;
 				default :
 					color = colors[0];

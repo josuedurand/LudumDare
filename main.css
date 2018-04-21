@@ -15,9 +15,9 @@
 	position : absolute;
 	width : 32px;
 	height : 32px;
-	background-color: red;
+	background-color: white;
 	border-radius : 50%;
-	top : 0;
-	left : 0;
+	top : 576px;
+	left : 288px;
 	z-index:  300;
 }
