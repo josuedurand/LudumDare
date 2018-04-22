@@ -20,7 +20,7 @@
 	top : 576px;
 	left : 288px;
 	z-index:  300;
-	transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) all 300ms;
+	transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) all 100ms;
 }
 
 .bateaux2 {

@@ -9,7 +9,7 @@ var character = {
 
 var bateaux2 = {
 	src 		: '',
-	elem		: $('bateaux2'),
+	elem		: $('.bateaux2'),
 	position 	: {
 		top 		: 512,
 		left 		: 480
@@ -18,7 +18,7 @@ var bateaux2 = {
 
 var bateaux31 = {
 	src 		: '',
-	elem		: $('bateaux31'),
+	elem		: $('.bateaux31'),
 	position 	: {
 		top 		: 448,
 		left 		: 128
@@ -27,7 +27,7 @@ var bateaux31 = {
 
 var bateaux32 = {
 	src 		: '',
-	elem		: $('bateaux32'),
+	elem		: $('.bateaux32'),
 	position 	: {
 		top 		: 224,
 		left 		: 96
@@ -36,7 +36,7 @@ var bateaux32 = {
 
 var bateaux4 = {
 	src 		: '',
-	elem		: $('bateaux4'),
+	elem		: $('.bateaux4'),
 	position 	: {
 		top 		: 128,
 		left 		: 352
@@ -45,7 +45,7 @@ var bateaux4 = {
 
 var bateaux5 = {
 	src 		: '',
-	elem		: $('bateaux5'),
+	elem		: $('.bateaux5'),
 	position 	: {
 		top 		: 352,
 		left 		: 224
@@ -54,7 +54,7 @@ var bateaux5 = {
 
 var objectif = {
 	src 		: '',
-	elem		: $('objectif'),
+	elem		: $('.objectif'),
 	position 	: {
 		top 		: 32,
 		left 		: 512
@@ -157,23 +157,22 @@ function update() {
 	if (isMoveUp) {
 		y -= 32;
 		character.elem.css('top', y + 'px');
-		collision();
 	} 
 	if (isMoveDown) {
 		y += 32;
 		character.elem.css('top', y + 'px');
-		collision();
 	}
 	if (isMoveLeft) {
 		x -= 32;
 		character.elem.css('left', x + 'px');
-		collision();
 	}
 	if (isMoveRight) {
 		x += 32;
 		character.elem.css('left', x + 'px');
-		collision();
 	}
+	collision();
+	//console.log(character.elem.position());
+	//console.log(objectif.elem.position());
 }
 
 document.addEventListener('keydown', move);
@@ -215,8 +214,8 @@ function noMove(evt) {
 }
 
 function collision() {
-	if (character.elem.position() == getTiles('b') ) {
-		alert('You Loose');
+	if (character.elem.position() == objectif.elem.position() ) {
+		alert('You Win');
 	}
 }
 
