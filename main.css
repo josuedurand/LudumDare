@@ -67,7 +67,7 @@
 	position : absolute;
 	width : 160px;
 	height : 32px;
-	background-color: green;
+	background: url(PorteAvions.png);
 	top : 352px;
 	left : 224px;
 	z-index:  200;
