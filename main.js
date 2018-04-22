@@ -7,7 +7,61 @@ var character = {
 	}
 }
 
-var colors = ['black', 'blue', 'red', 'green', 'white'];
+var bateaux2 = {
+	src 		: '',
+	elem		: $('bateaux2'),
+	position 	: {
+		top 		: 512,
+		left 		: 480
+	}
+}
+
+var bateaux31 = {
+	src 		: '',
+	elem		: $('bateaux31'),
+	position 	: {
+		top 		: 448,
+		left 		: 128
+	}
+}
+
+var bateaux32 = {
+	src 		: '',
+	elem		: $('bateaux32'),
+	position 	: {
+		top 		: 224,
+		left 		: 96
+	}
+}
+
+var bateaux4 = {
+	src 		: '',
+	elem		: $('bateaux4'),
+	position 	: {
+		top 		: 128,
+		left 		: 352
+	}
+}
+
+var bateaux5 = {
+	src 		: '',
+	elem		: $('bateaux5'),
+	position 	: {
+		top 		: 352,
+		left 		: 224
+	}
+}
+
+var objectif = {
+	src 		: '',
+	elem		: $('objectif'),
+	position 	: {
+		top 		: 32,
+		left 		: 512
+	}
+}
+
+var imgs = ['water.png', 'fog.png'];
 var $container = $('.tableau');
 var tileSize = 32;
 
@@ -25,23 +79,20 @@ function initGrid() {
 			var color;
 
 			switch(cell) {
-				case 1 :
-					color = colors[1];
-					break;
-				case 'p' :
-					color = colors[2];
-					break;
-				case 'b' :
-					color = colors[3];
+				case 0 :
+					img = imgs[0];
 					break;
 				default :
-					color = colors[0];
+					img = imgs[1];
 					break;
 			}
 
 			var tile = $('<div>');
+			var tileImg= $('<img>');
+			tileImg.attr('src', img);
+			tileImg.appendTo(tile);
+
 			tile.addClass('tile');
-			tile.css('background-color', color);
 			tile.appendTo($container);
 
 			tile.css('left', (tileSize * c) + 'px');
@@ -164,7 +215,7 @@ function noMove(evt) {
 }
 
 function collision() {
-	if (character.elem.position() == getTiles('b')*tileSize) {
+	if (character.elem.position() == getTiles('b') ) {
 		alert('You Loose');
 	}
 }

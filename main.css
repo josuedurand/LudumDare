@@ -15,9 +15,70 @@
 	position : absolute;
 	width : 32px;
 	height : 32px;
-	background-color: white;
+	background-color: black;
 	border-radius : 50%;
 	top : 576px;
 	left : 288px;
 	z-index:  300;
+	transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) all 300ms;
+}
+
+.bateaux2 {
+	position : absolute;
+	width : 64px;
+	height : 32px;
+	background: url(Torpilleur.png);
+	top : 512px;
+	left : 480px;
+	z-index:  200;
+}
+
+.bateaux31 {
+	position : absolute;
+	width : 96px;
+	height : 32px;
+	background: url(SousMarin.png);
+	top : 448px;
+	left : 128px;
+	z-index:  200;
+}
+
+.bateaux32 {
+	position : absolute;
+	width : 32px;
+	height : 96px;
+	background: url(SousMarin2.png);
+	top : 224px;
+	left : 96px;
+	z-index:  200;
+}
+
+.bateaux4 {
+	position : absolute;
+	width : 32px;
+	height : 128px;
+	background: url(Croiseur.png);
+	top : 128px;
+	left : 352px;
+	z-index:  200;
+}
+
+.bateaux5 {
+	position : absolute;
+	width : 160px;
+	height : 32px;
+	background-color: green;
+	top : 352px;
+	left : 224px;
+	z-index:  200;
+}
+
+.objectif {
+	position : absolute;
+	width : 32px;
+	height : 32px;
+	background: url(fish.png);
+	top : 32px;
+	left : 512px;
+	z-index:  200;
 }
