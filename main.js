@@ -11,8 +11,8 @@ var bateaux2 = {
 	src 		: '',
 	elem		: $('.bateaux2'),
 	position 	: {
-		top 		: 512,
-		left 		: 480
+		l 		: 16,
+		c 		: 480
 	}
 }
 
@@ -20,8 +20,8 @@ var bateaux31 = {
 	src 		: '',
 	elem		: $('.bateaux31'),
 	position 	: {
-		top 		: 448,
-		left 		: 128
+		l 		: 14,
+		c 		: 128
 	}
 }
 
@@ -29,7 +29,7 @@ var bateaux32 = {
 	src 		: '',
 	elem		: $('.bateaux32'),
 	position 	: {
-		top 		: 224,
+		l 		: 7,
 		left 		: 96
 	}
 }
@@ -38,7 +38,7 @@ var bateaux4 = {
 	src 		: '',
 	elem		: $('.bateaux4'),
 	position 	: {
-		top 		: 128,
+		l 		: 4,
 		left 		: 352
 	}
 }
@@ -47,7 +47,7 @@ var bateaux5 = {
 	src 		: '',
 	elem		: $('.bateaux5'),
 	position 	: {
-		top 		: 352,
+		l 		: 11,
 		left 		: 224
 	}
 }
@@ -146,6 +146,11 @@ var x= character.position["c"];//Number(character.elem.css('left').replace('px',
 var y= character.position["l"];//Number(character.elem.css('top').replace('px', ''));
 var xObjectif= objectif.position["c"];//Number(character.elem.css('left').replace('px', ''));
 var yObjectif= objectif.position["l"];
+var yBateaux2= bateaux2.position["l"];
+var yBateaux31= bateaux31.position["l"];
+var yBateaux5= bateaux5.position["l"];
+var yBateaux32= bateaux32.position["l"];
+var yBateaux4= bateaux4.position["l"];
 
 function init() {
 	isMoveUp= false;
@@ -233,6 +238,26 @@ function noMove(evt) {
 function collision() {
 	if (x == xObjectif && y == yObjectif) {
 		alert('You Win');
+		init();
+	}
+	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux2.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux2.elem.css('left').replace('px', ''))+64 && y == yBateaux2) {
+		alert('You Loose');
+		init();
+	}
+	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux31.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux31.elem.css('left').replace('px', ''))+96  && y == yBateaux31) {
+		alert('You Loose');
+		init();
+	}
+	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux5.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux5.elem.css('left').replace('px', ''))+160  && y == yBateaux5) {
+		alert('You Loose');
+		init();
+	}
+	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux32.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux32.elem.css('left').replace('px', ''))+96 && y == yBateaux32) {
+		alert('You Loose');
+		init();
+	}
+	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux4.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux4.elem.css('left').replace('px', ''))+128 && y == yBateaux4) {
+		alert('You Loose');
 		init();
 	}
 }
