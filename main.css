@@ -53,8 +53,8 @@
 
 .bateaux32 {
 	position : absolute;
-	width : 32px;
-	height : 96px;
+	width : 96px;
+	height : 32px;
 	background: url(SousMarin2.png);
 	top : 224px;
 	left : 96px;
@@ -63,8 +63,8 @@
 
 .bateaux4 {
 	position : absolute;
-	width : 32px;
-	height : 128px;
+	width : 128px;
+	height : 32px;
 	background: url(Croiseur.png);
 	top : 128px;
 	left : 352px;
