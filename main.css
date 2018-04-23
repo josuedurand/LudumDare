@@ -49,38 +49,59 @@
 	top : 448px;
 	left : 128px;
 	z-index:  200;
+	animation: moveB31 1.5s;
+	animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes moveB31 {
+	from {left: 512px;}
+	to {left: 32px;}
 }
 
 .bateaux32 {
 	position : absolute;
-<<<<<<< HEAD
 	width : 32px;
 	height : 96px;
 	background: url(SousMarin2.png)no-repeat top center;
-=======
 	width : 96px;
 	height : 32px;
 	background: url(SousMarin2.png);
->>>>>>> 5ca1da8f7c6180ed1a1ddf733c1b09e396ccb971
 	top : 224px;
 	left : 96px;
 	z-index:  200;
+	animation: moveB32 1.2s;
+	animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes moveB32 {
+	from {left: 512px;}
+	to {left: 32px;}
 }
 
 .bateaux4 {
 	position : absolute;
-<<<<<<< HEAD
 	width : 32px;
 	height : 128px;
 	background: url(Croiseur.png)no-repeat top center;
-=======
 	width : 128px;
 	height : 32px;
 	background: url(Croiseur.png);
->>>>>>> 5ca1da8f7c6180ed1a1ddf733c1b09e396ccb971
 	top : 128px;
 	left : 352px;
 	z-index:  200;
+	animation: moveB4 1s;
+	animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes moveB4 {
+	from {left: 480px;}
+	to {left: 32px;}
 }
 
 .bateaux5 {
