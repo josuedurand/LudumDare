@@ -82,6 +82,9 @@ function initGrid() {
 				case 0 :
 					img = imgs[0];
 					break;
+				case 'b' :
+
+					break;
 				default :
 					img = imgs[1];
 					break;
@@ -131,7 +134,7 @@ function moveCharacter(l, c) {
 		'left'		: c * tileSize
 	});
 
-	character.position = character.elem.position();
+	character.position = {l, c}//character.elem.position();
 }
 
 var timer;

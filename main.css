@@ -68,8 +68,17 @@
 	height : 32px;
 	background: url(PorteAvions.png);
 	top : 352px;
-	left : 224px;
+	left : 448px;
 	z-index:  200;
+	animation: moveFish	 2s;
+	animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes moveFish {
+	from {left: 448px;}
+	to {left: 32px;}
 }
 
 .objectif {
