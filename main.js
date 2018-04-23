@@ -2,8 +2,8 @@ var character = {
 	src 		: '',
 	elem		: $('.character'),
 	position 	: {
-		top 		: 576,
-		left 		: 288
+		l 		: 18,
+		c 		: 9
 	}
 }
 
@@ -56,8 +56,8 @@ var objectif = {
 	src 		: '',
 	elem		: $('.objectif'),
 	position 	: {
-		top 		: 32,
-		left 		: 512
+		l 		: 1,
+		c 		: 16
 	}
 }
 
@@ -139,14 +139,22 @@ var isMoveUp;
 var isMoveDown;
 var isMoveLeft;
 var isMoveRight;
-var x= Number(character.elem.css('left').replace('px', ''));
-var y= Number(character.elem.css('top').replace('px', ''));
+var x= character.position["c"];//Number(character.elem.css('left').replace('px', ''));
+var y= character.position["l"];//Number(character.elem.css('top').replace('px', ''));
+var xObjectif= objectif.position["c"];//Number(character.elem.css('left').replace('px', ''));
+var yObjectif= objectif.position["l"];
 
 function init() {
 	isMoveUp= false;
 	isMoveDown= false;
 	isMoveRight= false;
 	isMoveLeft= false;
+	character.elem.css({
+		'top'	: 576,
+		'left'	: 288
+	});
+	x= 9;
+	y= 18;
 	if (timer != null) {
 		clearInterval(timer);
 	}
@@ -155,24 +163,30 @@ function init() {
 
 function update() {
 	if (isMoveUp) {
-		y -= 32;
-		character.elem.css('top', y + 'px');
+		y -= 1;
+		moveCharacter(y, x);
+		//character.elem.css('top', y + 'px');
 	} 
 	if (isMoveDown) {
-		y += 32;
-		character.elem.css('top', y + 'px');
+		y += 1;
+		moveCharacter(y, x);
+		//character.elem.css('top', y + 'px');
 	}
 	if (isMoveLeft) {
-		x -= 32;
-		character.elem.css('left', x + 'px');
+		x -= 1;
+		moveCharacter(y, x);
+		//character.elem.css('left', x + 'px');
 	}
 	if (isMoveRight) {
-		x += 32;
-		character.elem.css('left', x + 'px');
+		x += 1;
+		moveCharacter(y, x);
+		//character.elem.css('left', x + 'px');
 	}
 	collision();
-	//console.log(character.elem.position());
-	//console.log(objectif.elem.position());
+	/*console.log(x);
+	console.log(y);
+	console.log(xObjectif);
+	console.log(yObjectif);*/
 }
 
 document.addEventListener('keydown', move);
@@ -214,8 +228,9 @@ function noMove(evt) {
 }
 
 function collision() {
-	if (character.elem.position() == objectif.elem.position() ) {
+	if (x == xObjectif && y == yObjectif) {
 		alert('You Win');
+		init();
 	}
 }
 
