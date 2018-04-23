@@ -26,7 +26,7 @@
 	position : absolute;
 	width : 64px;
 	height : 32px;
-	background: url(Torpilleur.png);
+	background: url(Torpilleur.png)no-repeat top center;
 	top : 512px;
 	left : 480px;
 	z-index:  200;
@@ -36,7 +36,7 @@
 	position : absolute;
 	width : 96px;
 	height : 32px;
-	background: url(SousMarin.png);
+	background: url(SousMarin.png)no-repeat top center;
 	top : 448px;
 	left : 128px;
 	z-index:  200;
@@ -46,7 +46,7 @@
 	position : absolute;
 	width : 32px;
 	height : 96px;
-	background: url(SousMarin2.png);
+	background: url(SousMarin2.png)no-repeat top center;
 	top : 224px;
 	left : 96px;
 	z-index:  200;
@@ -56,7 +56,7 @@
 	position : absolute;
 	width : 32px;
 	height : 128px;
-	background: url(Croiseur.png);
+	background: url(Croiseur.png)no-repeat top center;
 	top : 128px;
 	left : 352px;
 	z-index:  200;
@@ -66,7 +66,7 @@
 	position : absolute;
 	width : 160px;
 	height : 32px;
-	background: url(PorteAvions.png);
+	background: url(PorteAvions.png)no-repeat top center;
 	top : 352px;
 	left : 224px;
 	z-index:  200;
@@ -76,7 +76,7 @@
 	position : absolute;
 	width : 32px;
 	height : 32px;
-	background: url(fish.png);
+	background: url(fish.png)no-repeat top center;
 	top : 32px;
 	left : 512px;
 	z-index:  200;

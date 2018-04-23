@@ -153,7 +153,7 @@ function init() {
 	timer= setInterval(update, 100);
 }
 
-function update() {
+function update() {			// Essayer d'utiliser plutot la fonction moveCharacter pour le deplacement 
 	if (isMoveUp) {
 		y -= 32;
 		character.elem.css('top', y + 'px');
