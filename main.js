@@ -240,23 +240,23 @@ function collision() {
 		alert('You Win');
 		init();
 	}
-	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux2.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux2.elem.css('left').replace('px', ''))+64 && y == yBateaux2) {
+	if (character.elem.position().left >= Math.round(bateaux2.elem.position().left) - 32 && character.elem.position().left <= Math.round(bateaux2.elem.position().left) + bateaux2.elem.width() && y == yBateaux2) {
 		alert('You Loose');
 		init();
 	}
-	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux31.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux31.elem.css('left').replace('px', ''))+96  && y == yBateaux31) {
+	if (character.elem.position().left >= Math.round(bateaux31.elem.position().left) - 32 && character.elem.position().left <= Math.round(bateaux31.elem.position().left )+ bateaux31.elem.width()  && y == yBateaux31) {
 		alert('You Loose');
 		init();
 	}
-	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux5.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux5.elem.css('left').replace('px', ''))+160  && y == yBateaux5) {
+	if (character.elem.position().left >= Math.round(bateaux5.elem.position().left) - 32 && character.elem.position().left <= Math.round(bateaux5.elem.position().left) + bateaux5.elem.width()  && y == yBateaux5) {
 		alert('You Loose');
 		init();
 	}
-	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux32.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux32.elem.css('left').replace('px', ''))+96 && y == yBateaux32) {
+	if (character.elem.position().left >= Math.round(bateaux32.elem.position().left) - 32 && character.elem.position().left <= Math.round(bateaux32.elem.position().left) + bateaux32.elem.width() && y == yBateaux32) {
 		alert('You Loose');
 		init();
 	}
-	if (character.elem.css('left').replace('px', '') >= Math.round(bateaux4.elem.css('left').replace('px', ''))&& character.elem.css('left').replace('px', '') <= Math.round(bateaux4.elem.css('left').replace('px', ''))+128 && y == yBateaux4) {
+	if (character.elem.position().left >= Math.round(bateaux4.elem.position().left) - 32 && character.elem.position().left <=Math.round(bateaux4.elem.position().left) + bateaux4.elem.width() && y == yBateaux4) {
 		alert('You Loose');
 		init();
 	}
